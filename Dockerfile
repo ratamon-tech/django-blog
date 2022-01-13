@@ -1,7 +1,8 @@
-FROM python:3.8
+FROM python:3
+ENV PYTHONUNBUFFERED 1
 
-RUN pip install django
-WORKDIR /app
-COPY app /app
-
-CMD ["python", "sample.py"]
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD . /code/
