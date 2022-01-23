@@ -57,7 +57,7 @@ docker-compose ps
 - コンテナの停止、およびそのコンテナとネットワークの削除
 
 ```
-docker-compose down
+docker-compose down -v
 ```
 
 # 参考
